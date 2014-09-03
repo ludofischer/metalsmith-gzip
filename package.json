@@ -1,0 +1,24 @@
+{
+  "name": "metalsmith-gzip",
+  "version": "0.1.0",
+  "author": "Ludovico Fischer",
+  "license": "MIT",
+  "description": "A Metalsmith plugin to compress build files with gzip.",
+  "keywords": [
+    "metalsmith",
+    "plugin"
+  ],
+  "main": "lib/index.js",
+  "dependencies": {
+    "async": "~0.9.0",
+    "lodash.clone": "~2.4.1"
+  },
+  "devDependencies": {
+    "tape": "~2.14.0",
+    "metalsmith": "~0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ludovicofischer/metalsmith-gzip"
+  }
+}
