@@ -1,10 +1,12 @@
-# metalsmith-gzip
+# metalsmith-gzip [![Build Status](https://travis-ci.org/ludovicofischer/metalsmith-gzip.svg?branch=master)](https://travis-ci.org/ludovicofischer/metalsmith-gzip)
 
 A [Metalsmith](http://metalsmith.io) plugin that lets you create gzipped versions of your build files. This is useful if you are hosting your website on Amazon S3, where it is not possible to set up compression on the server.
 
 ## Installation
 
-  $ npm install metalsmith-gzip
+```
+$ npm install metalsmith-gzip
+```
 
 ## Usage
 
@@ -17,7 +19,7 @@ var metalsmith = new Metalsmith(__dirname)
 
 ```
 
-`metalsmith-gzip` will produce a gzipped version of all files in your build whose extension matches the following regular expression
+metalsmith-gzip will produce a gzipped version of all files in your build whose extension matches the following regular expression
 
 ```javascript
 /\.[html|css|js|json|xml|svg|txt]/
@@ -25,9 +27,9 @@ var metalsmith = new Metalsmith(__dirname)
 
 The choice of files to compress is loosely based on the [HTML5 Boilerplate server configuration](https://github.com/h5bp/server-configs-apache).
 
-You will then need to set up a script yourself to upload the gzipped versions of the files to your preferred hosting provider. Take care that the files are served with the correct Content-encoding.
+You will then need to set up a script yourself to upload the gzipped versions of the files to your preferred hosting provider. Take care that the files are served with the correct Content-Encoding.
 
- At the moment, `metalsmith-gzip` does not take any configuration options. 
+ At the moment, metalsmith-gzip does not take any configuration options. 
 
 ## Acknowledgements
 
