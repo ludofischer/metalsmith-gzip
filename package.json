@@ -13,13 +13,13 @@
     "test": "node test/index.js"
   },
   "dependencies": {
-    "async": "~0.9.0",
-    "lodash.clone": "~2.4.1",
+    "async": "^0.9.0",
+    "lodash.clone": "^2.4.1",
     "multimatch": "^1.0.0"
   },
   "devDependencies": {
-    "tape": "~2.14.0",
-    "metalsmith": "~0.10.0"
+    "tape": "^3.0.1",
+    "metalsmith": "^1.0.1"
   },
   "repository": {
     "type": "git",
