@@ -1,6 +1,6 @@
 # metalsmith-gzip [![Build Status](https://travis-ci.org/ludovicofischer/metalsmith-gzip.svg?branch=master)](https://travis-ci.org/ludovicofischer/metalsmith-gzip)
 
-A [Metalsmith](http://metalsmith.io) plugin that creates gzipped copies of your site's content. This is useful if you are hosting your website on Amazon S3, where it is not possible to set up compression on the server.
+A [Metalsmith](http://metalsmith.io) plugin that creates gzipped copies of your site's content. This is useful to host a website on Amazon S3, where it is impossible compress files on the fly in the server.
 
 ## Installation
 
@@ -9,6 +9,8 @@ $ npm install metalsmith-gzip
 ```
 
 ## Usage
+
+### Basic
 
 ```javascript
 var Metalsmith = require('metalsmith');
@@ -27,7 +29,19 @@ metalsmith-gzip will gzip a file if the extension matches this regular expressio
 
 The choice of files to compress is loosely based on the [HTML5 Boilerplate server configuration](https://github.com/h5bp/server-configs-apache).
 
-You will then need to set up a script yourself to upload the gzipped versions of the files to your preferred hosting provider. Take care that the files are served with the correct Content-Encoding.
+### Customization
+
+To customize the files metalsmith-gzip compresses pass an options object, where the `src` property is a pattern [multimatch](https://github.com/sindresorhus/multimatch) understands.
+
+```javascript
+var metalsmith = new Metalsmith(__dirname)
+  .use(compress({src: ['**/*.js', '**/*.css']})); // only compresses JavaScript and CSS
+
+```
+
+### Uploading to the server
+
+You need create a script to upload the gzipped versions of the files to your preferred hosting provider yourself. Take care to serve the files with the correct Content-Encoding.
 
 ## Acknowledgements
 
