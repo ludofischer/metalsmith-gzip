@@ -10,8 +10,6 @@ $ npm install metalsmith-gzip
 
 ## Usage
 
-### Basic
-
 ```javascript
 var Metalsmith = require('metalsmith');
 var compress = require('metalsmith-gzip');
