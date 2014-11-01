@@ -19,7 +19,7 @@ var metalsmith = new Metalsmith(__dirname)
 
 ```
 
-metalsmith-gzip will gzip a file if the extension matches this regular expression:
+`metalsmith-gzip` will gzip a file if the extension matches this regular expression:
 
 ```javascript
 /\.[html|css|js|json|xml|svg|txt]/
@@ -29,7 +29,7 @@ The choice of files to compress is loosely based on the [HTML5 Boilerplate serve
 
 ### Customization
 
-To customize the files metalsmith-gzip compresses pass an options object, where the `src` property is a pattern [multimatch](https://github.com/sindresorhus/multimatch) understands.
+To customize the files `metalsmith-gzip` compresses pass an options object, where the `src` property is a pattern [multimatch](https://github.com/sindresorhus/multimatch) understands.
 
 ```javascript
 var metalsmith = new Metalsmith(__dirname)
