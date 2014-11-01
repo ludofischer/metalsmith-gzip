@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-gzip",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Ludovico Fischer",
   "license": "MIT",
   "description": "A Metalsmith plugin to compress build files with gzip.",
