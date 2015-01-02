@@ -1,6 +1,6 @@
 # metalsmith-gzip [![Build Status](https://travis-ci.org/ludovicofischer/metalsmith-gzip.svg?branch=master)](https://travis-ci.org/ludovicofischer/metalsmith-gzip)
 
-A [Metalsmith](http://metalsmith.io) plugin that creates gzipped copies of your site's content. This is useful to host a website on Amazon S3, where it is impossible compress files on the fly in the server.
+A [Metalsmith](http://metalsmith.io) plugin that creates gzipped copies of the site's content. This is useful for website hosting on Amazon S3, where on the fly compression in the server is impossible.
 
 ## Installation
 
@@ -29,7 +29,9 @@ The choice of files to compress is loosely based on the [HTML5 Boilerplate serve
 
 ### Customization
 
-To customize the files `metalsmith-gzip` compresses pass an options object, where the `src` property is a pattern [multimatch](https://github.com/sindresorhus/multimatch) understands.
+Pass an options object to customize metalsmith-gzip behaviour. These are the available options keys:
+
+`src` is a [multimatch](https://github.com/sindresorhus/multimatch) pattern which specifies which types of files to compress.
 
 ```javascript
 var metalsmith = new Metalsmith(__dirname)
@@ -37,10 +39,21 @@ var metalsmith = new Metalsmith(__dirname)
 
 ```
 
-### Uploading to the server
+`gzip` is the same configuration object accepted by `zlib.createGzip` (http://nodejs.org/api/zlib.html#zlib_options). For example, you can set the compression level:
 
-You need create a script to upload the gzipped versions of the files to your preferred hosting provider yourself. Take care to serve the files with the correct Content-Encoding.
+```javascript
+var metalsmith = new Metalsmith(__dirname)
+  .use(compress({
+  src: ['**/*.js', '**/*.css'],
+  gzip: {level: 6}
+  })); // only compresses JavaScript and CSS
+
+```
+
+### Deployment
+
+You need to create a script to upload the gzipped versions of the files to your preferred hosting provider yourself. Take care to serve the files with the correct Content-Encoding.
 
 ## Acknowledgements
 
-This plugin was inspired by the [Middleman gzip extension](http://middlemanapp.com/advanced/file-size-optimization/). 
+This plugin was inspired by the [Middleman gzip extension](http://middlemanapp.com/advanced/file-size-optimization/).
