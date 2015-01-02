@@ -1,5 +1,8 @@
 # Changelog #
 
+## 1.0.0 ##
+* Updated multimatch dependency, with possible (minimal) pattern matching behaviour changes
+
 ## 0.3 ##
 * Allow to set gzip compression level
 
