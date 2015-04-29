@@ -38,3 +38,20 @@ test('Multimatch source definition is followed', function(t) {
       });
 });
 
+test('Overwrite option has effect', function(t) {
+    t.plan(9);
+    var metalsmith = Metalsmith('test/fixtures/pdf');
+    metalsmith
+      .use(compress({overwrite: true}))
+      .build(function(err, files) {
+          t.error(err, 'No build errors');
+          t.notOk(files['style.css.gz'], 'No separate compressed CSS is created');
+          t.ok(files['style.css'], 'The original CSS is conserved');
+          t.notOk(files['index.html.gz'], 'No separate compressed HTML is created');
+          t.ok(files['index.html'], 'The original HTML is conserved');
+          t.notOk(files['document.svg.gz'], 'No separate compressed SVG is created');
+          t.ok(files['document.svg'], 'The original SVG is conserved');
+          t.notOk(files['document.pdf.gz'], 'No compressed PDF is created');
+          t.ok(files['document.pdf'], 'The original PDF is conserved');
+      });
+});
