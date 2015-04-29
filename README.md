@@ -47,6 +47,7 @@ var metalsmith = new Metalsmith(__dirname)
     src: ['**/*.js', '**/*.css'],
     gzip: {level: 6}
 }));
+```
 
 Add `overwrite: true` to replace files with the compressed version instead of creating a copy with the '.gz' extension:
 
