@@ -44,10 +44,15 @@ var metalsmith = new Metalsmith(__dirname)
 ```javascript
 var metalsmith = new Metalsmith(__dirname)
   .use(compress({
-  src: ['**/*.js', '**/*.css'],
-  gzip: {level: 6}
-  })); // only compresses JavaScript and CSS
+    src: ['**/*.js', '**/*.css'],
+    gzip: {level: 6}
+}));
 
+Add `overwrite: true` to replace files with the compressed version instead of creating a copy with the '.gz' extension:
+
+```javascript
+var metalsmith = new Metalsmith(__dirname)
+  .use(compress({overwrite: true});
 ```
 
 ### Deployment
