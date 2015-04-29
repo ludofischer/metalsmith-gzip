@@ -1,5 +1,7 @@
 # Changelog #
 
+* Added option to overwrite existing files with compressed version (#6)
+
 ## 1.0.0 ##
 * Updated multimatch dependency, with possible (minimal) pattern matching behaviour changes
 
