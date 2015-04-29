@@ -1,5 +1,6 @@
 # Changelog #
 
+## 1.1.0 ##
 * Added option to overwrite existing files with compressed version (#6)
 
 ## 1.0.0 ##
