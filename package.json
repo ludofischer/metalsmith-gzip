@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "tape": "^4.0.0",
-    "metalsmith": "^1.6.0"
+    "metalsmith": "^1.7.0"
   },
   "repository": {
     "type": "git",
