@@ -13,12 +13,14 @@
     "test": "node test/index.js"
   },
   "dependencies": {
-    "async": "^3.0.1",
-    "micromatch": "^4.0.2"
+    "async": "^3.0.1"
   },
   "devDependencies": {
-    "tape": "^4.2.0",
-    "metalsmith": "^2.1.0"
+    "metalsmith": "^2.6.1",
+    "tape": "^4.2.0"
+  },
+  "peerDependencies": {
+    "metalsmith": "^2.6.1"
   },
   "repository": {
     "type": "git",
