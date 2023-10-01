@@ -12,9 +12,6 @@
   "scripts": {
     "test": "node test/index.js"
   },
-  "dependencies": {
-    "async": "^3.0.1"
-  },
   "devDependencies": {
     "metalsmith": "^2.6.1",
     "tape": "^4.2.0"
