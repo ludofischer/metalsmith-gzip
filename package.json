@@ -27,5 +27,8 @@
     "url": "https://github.com/ludovicofischer/metalsmith-gzip"
   },
   "homepage": "https://github.com/ludovicofischer/metalsmith-gzip",
-  "bugs": "https://github.com/ludovicofischer/metalsmith-gzip/issues"
+  "bugs": "https://github.com/ludovicofischer/metalsmith-gzip/issues",
+  "dependencies": {
+    "bytes": "^3.1.2"
+  }
 }

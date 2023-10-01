@@ -6,6 +6,7 @@ test('By default, only the specified files are compressed', function(t) {
   t.plan(9);
   var metalsmith = Metalsmith('test/fixtures/pdf');
   metalsmith
+      .env('DEBUG', process.env.DEBUG)
       .use(compress())
       .build(function(err, files) {
           t.error(err, 'No build errors');
@@ -24,6 +25,7 @@ test('Multimatch source definition is followed', function(t) {
   t.plan(9);
   var metalsmith = Metalsmith('test/fixtures/pdf');
   metalsmith
+      .env('DEBUG', process.env.DEBUG)
       .use(compress({ src: ["**/*.css", "**/*.pdf"] }))
       .build(function(err, files) {
           t.error(err, 'No build errors');
@@ -42,6 +44,7 @@ test('Overwrite option has effect', function(t) {
     t.plan(9);
     var metalsmith = Metalsmith('test/fixtures/pdf');
     metalsmith
+      .env('DEBUG', process.env.DEBUG)
       .use(compress({overwrite: true}))
       .build(function(err, files) {
           t.error(err, 'No build errors');
