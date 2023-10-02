@@ -1,6 +1,4 @@
-# metalsmith-gzip [![Build Status](https://travis-ci.org/ludovicofischer/metalsmith-gzip.svg?branch=master)](https://travis-ci.org/ludovicofischer/metalsmith-gzip)
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/ludovicofischer/metalsmith-gzip.svg)](https://greenkeeper.io/)
+# metalsmith-gzip 
 
 A [Metalsmith](http://metalsmith.io) plugin that creates gzipped copies of the site's content. This is useful for website hosting on Amazon S3, where on the fly compression in the server is impossible.
 
