@@ -1,5 +1,10 @@
 # Changelog #
 
+## 2.0.0 ##
+* Add debug log with original and compressed file size
+* Take advantage of metalsmith's built-in match
+* Raise minimum required Node.js version to 18.12.0
+
 ## 1.1.0 ##
 * Added option to overwrite existing files with compressed version (#6)
 
