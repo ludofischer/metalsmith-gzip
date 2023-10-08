@@ -10,11 +10,10 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "node --test test/*.js"
   },
   "devDependencies": {
-    "metalsmith": "^2.6.1",
-    "tape": "^4.2.0"
+    "metalsmith": "^2.6.1"
   },
   "peerDependencies": {
     "metalsmith": "^2.6.1"
