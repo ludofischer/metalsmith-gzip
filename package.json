@@ -13,6 +13,7 @@
     "test": "node --test test/*.js"
   },
   "devDependencies": {
+    "eslint": "^8.51.0",
     "metalsmith": "^2.6.1"
   },
   "peerDependencies": {
